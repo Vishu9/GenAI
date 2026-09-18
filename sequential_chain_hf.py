@@ -24,8 +24,11 @@ prompt2 = PromptTemplate(
 )
 
 llm = HuggingFaceEndpoint(
-    repo_id="Qwen/Qwen2.5-7B-Instruct",
+    # repo_id="Qwen/Qwen2.5-7B-Instruct",
+
+    repo_id = "Qwen/Qwen3.8-2.4T-A95B",
     task="text-generation",
+    # provider="novita"  
 )
 
 model = ChatHuggingFace(llm=llm)
